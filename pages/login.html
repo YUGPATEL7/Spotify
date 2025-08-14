@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../imgs&logo/favicon.ico" type="image/svg+xml">
+
+    <title>Login -Spotify</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="align-items">
+
+            <div class="logo ">
+                <img src="../imgs&logo/favicon.ico" alt="Spotify Logo">
+            </div>
+            <div class="text">
+                <h1>Log in to Spotify</h1>  
+            </div>
+        </div>
+        <div class="continuewith">
+            <div class="gfap">
+                <img src="../imgs&logo/google-icon-logo-svgrepo-com.svg" alt="Google Logo">
+                <p>Continue with Google</p>
+            </div>
+            <div class="gfap">
+                <img src="../imgs&logo/facebook.svg" alt="Apple Logo">
+                <p>Continue with facebook</p>
+            </div>
+            <div class="gfap">
+                <img src="../imgs&logo/apple-logo-svgrepo-com.svg" alt="Apple Logo" style="filter: invert();">
+                <p>Continue with Apple</p>
+            </div>
+            <div class="gfap">
+                <p>Continue with phone number</p>
+            </div>
+
+            <div class="line">
+                <hr>
+            </div>
+            <form id="login-form" action="http://127.0.0.1:3000/Spotify/Soptify.html" method="POST">
+                <div>
+                    <p style="font-weight: bold;">Email or username</p>
+                </div>
+                <div class="inputemail">
+                    <input type="text" placeholder="Email or username" id="emailInput" required>
+                    <p class="error-message" id="emailError">Please enter a valid email or username.</p>
+                </div>
+                <div>
+                    <p style="font-weight: bold;">Password</p>
+                </div>
+                <div class="inputemail">
+                    <input type="password" placeholder="Password" id="passwordInput" required>
+                    <img src="../imgs&logo/viewnot.svg" alt="Toggle Password" id="togglePassword">
+                    <p class="error-message" id="passwordError">Password must be at least 8 characters, include a letter, a number, and a special character.</p>
+                </div>
+                <div class="log">
+                    <button id="loginButton" type="submit" disabled>Log in</button>
+                </div>
+            </form>
+        </div>
+        <div class="align-items">
+
+            <div class="forgot">
+                <a href="../pages/email.html">Forgot your password?</a>
+            </div>
+            <div class="Donothaveaccount">
+                Donot have an account?<a href="./signup.html"> Sign up for Spotify</a>
+            </div>
+        </div>
+        
+    </div>
+        <footer>
+            <div class="end">
+                <p>
+                    This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                </p>
+            </div>
+        </footer>
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const emailInput = document.getElementById("emailInput");
+            const passwordInput = document.getElementById("passwordInput");
+            const loginButton = document.getElementById("loginButton");
+            const loginForm = document.getElementById("login-form");
+            const emailError = document.getElementById("emailError");
+            const passwordError = document.getElementById("passwordError");
+
+            function validateForm() {
+                const emailValue = emailInput.value.trim();
+                const passwordValue = passwordInput.value.trim();
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+
+                let isValid = true;
+
+                // Validate email/username
+                if (emailValue === "") {
+                    emailError.textContent = "Email or username is required.";
+                    emailError.style.display = "block";
+                    isValid = false;
+                } else if (!emailRegex.test(emailValue) && !emailValue.includes(" ")) { 
+                    // If not an email, allow spaces (indicating a username)
+                    emailError.textContent = "⚠ Please enter a valid email or username.";
+                    emailError.style.display = "block";
+                    isValid = false;
+                } else {
+                    emailError.style.display = "none";
+                }
+
+                // Validate password
+                if (passwordValue === "") {
+                    passwordError.textContent = "Password is required.";
+                    passwordError.style.display = "block";
+                    isValid = false;
+                } else if (!passwordRegex.test(passwordValue)) {
+                    passwordError.textContent = "⚠ Password must be at least 8 characters, include letter,number,& special character.";
+                    passwordError.style.display = "block";
+                    isValid = false;
+                } else {
+                    passwordError.style.display = "none";
+                }
+
+                // Enable or disable login button
+                loginButton.disabled = !isValid;
+            }
+
+            // Add event listeners to validate input in real-time
+            emailInput.addEventListener("input", validateForm);
+            passwordInput.addEventListener("input", validateForm);
+
+            // Ensure form submits properly
+            loginForm.addEventListener("submit", function (e) {
+                validateForm();
+                if (loginButton.disabled) {
+                    e.preventDefault(); // Prevent form submission if validation fails
+                }
+            });
+        });
+        document.getElementById("togglePassword").addEventListener("click", ()=>{
+            const passwordInput = document.getElementById("passwordInput");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                document.getElementById("togglePassword").src = "../imgs&logo/view.svg";
+            } else {
+                passwordInput.type = "password";
+                document.getElementById("togglePassword").src = "../imgs&logo/viewnot.svg";
+            }
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

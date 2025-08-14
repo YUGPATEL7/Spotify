@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    background: linear-gradient(180deg, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 100%);
+    padding-top: 32px ;
+    font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+html {
+    scroll-behavior: smooth;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+a:hover{
+    color: #1ed760;;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 6rem 3rem;
+    row-gap: 1rem;
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    border-radius: .65rem;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 75%);
+}
+.error-message {
+    color: #F3727F;
+    font-size: 10px;
+    font-weight: bold;
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 11px;
+}
+#passwordError {
+    position: relative;
+    top: -26px;
+}
+
+.align-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+    row-gap: 2rem;
+    padding-left: 17px;
+}
+.gfap img {
+    width: 20px;
+    height: 20px;
+}
+.logo img{
+filter: invert(1);
+width: 36px;
+height: 36px;
+}
+.gfap{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+        border: 1px solid #716e6e;
+        border-radius: 2rem;
+        padding: 12px;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        inline-size: 100%;
+        margin: 8px;
+        width: 100%;
+    /* justify-content: center; */
+}
+.gfap p{
+    flex-grow: 0;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    padding-right: 60px;
+    padding-left: 40px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+        }
+.gfap:hover{
+    border: 1px solid #fff; 
+    
+}
+hr{
+    margin: 32px -110px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: 1px solid rgb(41, 41, 41);
+}
+
+.inputemail input {
+    /* margin: 0 auto; */
+    color: #ffffff;
+    margin: 8px auto;
+    padding: 15px 0;
+    border: none;
+    border: 1px solid #716e6e;
+    padding-inline-start:12px;
+    border-radius: 8px;
+    width: 100%;
+    --background-base: #121212;
+    background-color: var(--background-base, #ffffff);
+}
+
+.inputemail input::placeholder{
+    font-size: 14px;
+    font-weight: bold;
+}
+#togglePassword{
+    position: relative;
+    top: -45px;
+    left: 375px;
+    cursor: pointer;
+    filter: invert();
+    width: 24px;
+    height: 24px;
+}
+.log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 32px 0px; */
+    row-gap: 1rem;
+
+}
+.log button{
+    padding: 15px 0;
+    border-radius: 50px;
+    margin: 0 --30px;
+    border: none;
+    background-color: #1db954;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+.inputemail input:hover{
+    border: 1px solid #fff; 
+    
+}
+.inputemail input:focus{
+    box-shadow: 0 0 9px 0px #ccc;
+}
+.forgot a{
+    margin-bottom: 18xp;
+}
+.log button:hover{
+    background-color: #1ed760;
+    transform: scale(1.1);
+}
+.end{
+    margin-top: 30px;
+    /* background-color: #716e6e; */
+    width: 100%;
+    background-color: #121212;
+}
+.end p{
+    padding: 32px;
+    text-align: center;
+    font-size: 12px;
+    word-wrap: break-word;
+    color: rgb(179, 179, 179);
+}
+
+@media  screen and (max-width: 800px){
+    body{
+        padding: 0;
+        margin: 0;
+        font-size: 11px;
+    }
+    .logo img{
+        filter: invert(1);
+        width: 24px;
+        height: 24px;
+        }
+    .align-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8px;
+        row-gap: 1rem;
+        padding-left: 17px;
+    }
+    #togglePassword{
+        left: 95%;
+    }
+    .main-container{
+        /* color: #000000; */
+        /* width: 100%; */
+        align-items: unset;
+    }
+
+    .end{
+        margin-top: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    h1{
+        font-size: 14px;
+    }
+    .gfap p{
+        font-size: 8px;
+        padding: 0;
+    }
+    .main-container{
+        width: 100%;
+    }
+    hr{
+        margin: 32px 0px;
+    }
+    .align-items{
+        padding-left: 17px;
+    }
+    .align-items a {
+        font-size: 10px;
+    }
+    .end{
+        padding: 0 100px;
+    }
+    .end p{
+        font-size: 10px;
+    }
+
+}

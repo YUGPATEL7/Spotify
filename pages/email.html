@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imgs&logo/favicon.ico" type="image/svg+xml">
+    <title>Reset Your Password - Spotify</title>
+    <style>
+        body {
+            background-color:#121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            height: 100vh;
+            margin: 0;
+            font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+
+        }
+        .container {
+            text-align: center;
+            width: 400px;
+        }
+        .main{
+            text-align: left;
+            box-sizing: content-box;
+            padding: 0px 32px;
+            word-wrap: break-word;
+        }
+        .logo {
+            margin-top: 40px;
+            width: 40px;
+            margin-bottom: 20px;
+            filter: invert();
+        }
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+
+        }
+        p {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 20px 0;
+            font-weight: bolder;
+            width: 100%;
+        }
+        .email{
+            font-weight: 900;
+        }
+        .input-box {
+            width: 80%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #b3b3b3;
+            border-radius: 4px;
+            background-color: #121212;
+            color: white;
+            font-size: 16px;
+        }
+        .btn {
+            width: 85%;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            background-color: #1DB954;
+            /* color: white;m */
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1aa34a;
+        }
+        .support {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #b3b3b3;
+            font-size: 14px;
+        }
+        .support a {
+            color: white;
+            text-decoration: none;
+        }
+        .support a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            position: absolute;
+            margin-top: 90px;
+            font-size: 12px;
+            color: #b3b3b3;
+            box-sizing: content-box;
+            padding: 0px 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../imgs&logo/favicon.ico" class="logo" alt="Spotify Logo">
+        <div class="main"> 
+            
+            <h1>Reset your password</h1>
+            <p>Enter the email address or username linked to your Spotify account and we'll send you an email.</p>
+            <p class="email">Email address or username</p >
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="aed0005b-e9b4-44df-9c41-e0b8456cd987">
+                    
+                    <input type="text"  placeholder="Email address or username" class="input-box" name="email"   required>
+                    <!-- <textarea name="Notice" rows="5" cols="33" hidden> hey mafia this side </textarea> -->
+                    <div class="support"><a href="#">Need support?</a></div>
+                    <button type="submit" class="btn">Send link</button>
+                </form>
+        </div>
+            <div class="footer">This site is protected by reCAPTCHA and the Google <br> Privacy Policy and Terms of Service apply.</div>
+    </div>
+</body>
+</html>

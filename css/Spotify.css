@@ -24,12 +24,12 @@ body{
 link[rel="icon"] {
     filter: invert(30%) sepia(90%) saturate(200%) hue-rotate(120deg);
 }
-
+/* make changes after long time feel like Egypt language */
 .section-title {
     color: white;
     font-size: 24px;
     margin: 20px 0 10px 0;
-
+    /* text-transform: uppercase; */
     border-bottom: 2px solid #272c29;
     padding-bottom: 5px;
     width: 100%;
@@ -53,7 +53,7 @@ link[rel="icon"] {
 }
 
 .btn:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1); /* Moves toward the user */
     background-color: #e6e6e6;
 }
 
@@ -61,7 +61,7 @@ link[rel="icon"] {
 .install-app {
     display: flex;
     gap: 7px;
-    color: #888; 
+    color: #888; /* Grey by default */
     cursor: pointer;
     transition: color 0.3s ease;
 }

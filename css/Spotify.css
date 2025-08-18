@@ -454,14 +454,7 @@ color: #716b6b;
     transition: left 0.5s ;
 } 
 
-/* .progress-bar-container {
-    flex-grow: 1;
-    height: 4px;
-    background-color: #5e5e5e;
-    border-radius: 2px;
-    position: relative;
-    cursor: pointer;
-} */
+
 
 .progress-bar {
     height: 100%;

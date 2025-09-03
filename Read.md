@@ -21,12 +21,6 @@ It helped me understand how frontend technologies work together and gave me a go
   - Password Change Page  
   - Explorer Page  
 
-- 🎨 **Pure Frontend**  
-  Everything is built only with:
-  - **HTML** for structure  
-  - **CSS** for styling  
-  - **JavaScript** for interactivity  
-
 ---
 
 ## 🛠️ Tech Stack

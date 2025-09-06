@@ -2,7 +2,6 @@
 
 This is my **first project**, where I tried to build a simple Spotify-like music player using **HTML, CSS, and JavaScript**.  
 It helped me understand how frontend technologies work together and gave me a good foundation to explore web development further.
-
 ---
 
 ## 🚀 Features

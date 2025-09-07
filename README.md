@@ -46,4 +46,5 @@ It helped me understand how frontend technologies work together and gave me a go
 This project is **only for learning purposes** and was my very first step into frontend development. It helped me gain confidence in HTML, CSS, and JavaScript.  
 
 ---
+
 -->
